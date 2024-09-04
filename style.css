@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri|Rakkas');
+    .nav{
+        display:flex;
+        justify-content: space-between;
+        width:100%;
+        padding:10px;
+        opacity:1;
+        padding:8px 0px;
+        background-color: #438c8e;
+    }
+
+    span.navbar{
+        width:50%;
+        display:flex;
+        justify-content: space-around;
+        color:white;
+        align-items: center;
+    }
+    .navbar a{
+        color:white;
+    }
+    label{
+        display:none;
+    }
+   #checkbox{
+    
+   }
+
+   /* nav{
+    position:absolute;
+    top:0;
+    padding:8px 0px;
+    background-color: #438c8e;
+    width:100%;
+    left:0;
+    text-align: center;
+
+} */
+.title{
+    font-size:40px;
+    color:#EEEEE8;
+    font-family: 'Rakkas', cursive;
+
+}
+
+.sidenav {
+    /* height: 100%; */
+    position: fixed;
+    z-index: 1;
+    background-color: #808080;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    flex-direction: column;
+  }
+  @media only screen and (max-width: 600px) {
+     .nav{
+        /* height: 100%; */
+        
+        position: absolute;
+        overflow-x: hidden;
+        right:-100%;
+        
+        transition:  0.5s;
+        padding-top: 60px;
+        flex-direction: column;
+      }
+     
+      #checkbox:checked~ nav {
+        
+        right:0;
+        background-color: red;
+        
+        /* transform: translateX(0); */
+       }
+    
+  }

@@ -1,23 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Amiri|Rakkas');
-    .nav{
+   header{
+    display:flex;
+    background-color: #438c8e;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+   }
+   *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
+.nav{
         display:flex;
-        justify-content: space-between;
-        width:100%;
+        justify-content: space-around;
         padding:10px;
         opacity:1;
         padding:8px 0px;
-        background-color: #438c8e;
+       
     }
 
-    span.navbar{
-        width:50%;
+    nav{
+        width:40%;
         display:flex;
         justify-content: space-around;
         color:white;
         align-items: center;
     }
-    .navbar a{
+    .nav a{
         color:white;
+        text-decoration: none;
     }
     label{
         display:none;
@@ -40,38 +52,115 @@
     font-size:40px;
     color:#EEEEE8;
     font-family: 'Rakkas', cursive;
+    height:fit-content;
+    width:40%;
+    display:flex;
+    text-align: right;
+    align-items: center;
+
+}
+main{
+    display:flex;
+}
+main section{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height:80vh;
+}
+.relative section{
+  background-color:rgb(201, 91, 109);
+  width:15rem;
+  height:7rem;
+}
+
+.relative div{
+   position:relative;
+   width:5rem;
+   height: 3rem;
+   background-color: blue;
+
+}
+.relative{
+    padding:1rem;
+}
+.first{
+    right:55%;
+    bottom:15%;
+}
+
+.scnd{
+    top:15%;
+    right:35%;
+    z-index:1;
+}
+.relative .thrd{
+    width:9rem;
+    height: 5rem;
+    background-color: black;
+    top: 18%;
+    right:45%;
+    transform: rotate(90deg);
+}
+
+main .text{
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.text h1{
+    margin:1rem;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #438c8e;
+    padding:1rem;
+    color: white;
 
 }
 
-.sidenav {
-    /* height: 100%; */
-    position: fixed;
-    z-index: 1;
-    background-color: #808080;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    flex-direction: column;
-  }
-  @media only screen and (max-width: 600px) {
+button{
+    padding: .7rem 1rem;
+    width:12rem;
+    border: none;
+    background-color: blue;
+    color: white;
+}
+  @media only screen and (max-width: 500px) {
      .nav{
-        /* height: 100%; */
+        display: none;
+     }
+     label{
+        display: block;
         
-        position: absolute;
-        overflow-x: hidden;
-        right:-100%;
-        
-        transition:  0.5s;
-        padding-top: 60px;
+     }
+     main ,footer{
         flex-direction: column;
-      }
-     
-      #checkbox:checked~ nav {
-        
-        right:0;
-        background-color: red;
-        
-        /* transform: translateX(0); */
-       }
-    
+        justify-content: space-around;
+     }
+     main section{
+        width:100%;
+     }
+      
+     .relative div{
+        position: static;
+       
+     }
+     .relative .thrd{
+        transform: rotate(0deg);
+     }
+     .relative {
+        justify-content: space-around;
+        align-content: space-around;
+        display:flex;
+   padding:0rem 3rem;
+        /* flex-direction: column; */
+        flex-wrap:wrap;
+     }
+     footer div{
+        margin-bottom: 1rem;
+    }
   }
